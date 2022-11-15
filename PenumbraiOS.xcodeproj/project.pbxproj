@@ -1,0 +1,607 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		08B34B0529243655003F0595 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08B34B0429243655003F0595 /* AppDelegate.swift */; };
+		08B34B0729243655003F0595 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08B34B0629243655003F0595 /* SceneDelegate.swift */; };
+		08B34B0929243655003F0595 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08B34B0829243655003F0595 /* ViewController.swift */; };
+		08B34B0C29243655003F0595 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 08B34B0A29243655003F0595 /* Main.storyboard */; };
+		08B34B0E29243656003F0595 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 08B34B0D29243656003F0595 /* Assets.xcassets */; };
+		08B34B1129243656003F0595 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 08B34B0F29243656003F0595 /* LaunchScreen.storyboard */; };
+		08B34B1C29243656003F0595 /* PenumbraiOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08B34B1B29243656003F0595 /* PenumbraiOSTests.swift */; };
+		08B34B2629243656003F0595 /* PenumbraiOSUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08B34B2529243656003F0595 /* PenumbraiOSUITests.swift */; };
+		08B34B2829243656003F0595 /* PenumbraiOSUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08B34B2729243656003F0595 /* PenumbraiOSUITestsLaunchTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		08B34B1829243656003F0595 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 08B34AF929243655003F0595 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 08B34B0029243655003F0595;
+			remoteInfo = PenumbraiOS;
+		};
+		08B34B2229243656003F0595 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 08B34AF929243655003F0595 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 08B34B0029243655003F0595;
+			remoteInfo = PenumbraiOS;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		08B34B0129243655003F0595 /* PenumbraiOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PenumbraiOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		08B34B0429243655003F0595 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		08B34B0629243655003F0595 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		08B34B0829243655003F0595 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		08B34B0B29243655003F0595 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		08B34B0D29243656003F0595 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		08B34B1029243656003F0595 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		08B34B1229243656003F0595 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		08B34B1729243656003F0595 /* PenumbraiOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PenumbraiOSTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		08B34B1B29243656003F0595 /* PenumbraiOSTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PenumbraiOSTests.swift; sourceTree = "<group>"; };
+		08B34B2129243656003F0595 /* PenumbraiOSUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PenumbraiOSUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		08B34B2529243656003F0595 /* PenumbraiOSUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PenumbraiOSUITests.swift; sourceTree = "<group>"; };
+		08B34B2729243656003F0595 /* PenumbraiOSUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PenumbraiOSUITestsLaunchTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		08B34AFE29243655003F0595 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		08B34B1429243656003F0595 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		08B34B1E29243656003F0595 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		08B34AF829243655003F0595 = {
+			isa = PBXGroup;
+			children = (
+				08B34B0329243655003F0595 /* PenumbraiOS */,
+				08B34B1A29243656003F0595 /* PenumbraiOSTests */,
+				08B34B2429243656003F0595 /* PenumbraiOSUITests */,
+				08B34B0229243655003F0595 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		08B34B0229243655003F0595 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				08B34B0129243655003F0595 /* PenumbraiOS.app */,
+				08B34B1729243656003F0595 /* PenumbraiOSTests.xctest */,
+				08B34B2129243656003F0595 /* PenumbraiOSUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		08B34B0329243655003F0595 /* PenumbraiOS */ = {
+			isa = PBXGroup;
+			children = (
+				08B34B0429243655003F0595 /* AppDelegate.swift */,
+				08B34B0629243655003F0595 /* SceneDelegate.swift */,
+				08B34B0829243655003F0595 /* ViewController.swift */,
+				08B34B0A29243655003F0595 /* Main.storyboard */,
+				08B34B0D29243656003F0595 /* Assets.xcassets */,
+				08B34B0F29243656003F0595 /* LaunchScreen.storyboard */,
+				08B34B1229243656003F0595 /* Info.plist */,
+			);
+			path = PenumbraiOS;
+			sourceTree = "<group>";
+		};
+		08B34B1A29243656003F0595 /* PenumbraiOSTests */ = {
+			isa = PBXGroup;
+			children = (
+				08B34B1B29243656003F0595 /* PenumbraiOSTests.swift */,
+			);
+			path = PenumbraiOSTests;
+			sourceTree = "<group>";
+		};
+		08B34B2429243656003F0595 /* PenumbraiOSUITests */ = {
+			isa = PBXGroup;
+			children = (
+				08B34B2529243656003F0595 /* PenumbraiOSUITests.swift */,
+				08B34B2729243656003F0595 /* PenumbraiOSUITestsLaunchTests.swift */,
+			);
+			path = PenumbraiOSUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		08B34B0029243655003F0595 /* PenumbraiOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 08B34B2B29243656003F0595 /* Build configuration list for PBXNativeTarget "PenumbraiOS" */;
+			buildPhases = (
+				08B34AFD29243655003F0595 /* Sources */,
+				08B34AFE29243655003F0595 /* Frameworks */,
+				08B34AFF29243655003F0595 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PenumbraiOS;
+			productName = PenumbraiOS;
+			productReference = 08B34B0129243655003F0595 /* PenumbraiOS.app */;
+			productType = "com.apple.product-type.application";
+		};
+		08B34B1629243656003F0595 /* PenumbraiOSTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 08B34B2E29243656003F0595 /* Build configuration list for PBXNativeTarget "PenumbraiOSTests" */;
+			buildPhases = (
+				08B34B1329243656003F0595 /* Sources */,
+				08B34B1429243656003F0595 /* Frameworks */,
+				08B34B1529243656003F0595 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				08B34B1929243656003F0595 /* PBXTargetDependency */,
+			);
+			name = PenumbraiOSTests;
+			productName = PenumbraiOSTests;
+			productReference = 08B34B1729243656003F0595 /* PenumbraiOSTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		08B34B2029243656003F0595 /* PenumbraiOSUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 08B34B3129243656003F0595 /* Build configuration list for PBXNativeTarget "PenumbraiOSUITests" */;
+			buildPhases = (
+				08B34B1D29243656003F0595 /* Sources */,
+				08B34B1E29243656003F0595 /* Frameworks */,
+				08B34B1F29243656003F0595 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				08B34B2329243656003F0595 /* PBXTargetDependency */,
+			);
+			name = PenumbraiOSUITests;
+			productName = PenumbraiOSUITests;
+			productReference = 08B34B2129243656003F0595 /* PenumbraiOSUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		08B34AF929243655003F0595 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1410;
+				LastUpgradeCheck = 1410;
+				TargetAttributes = {
+					08B34B0029243655003F0595 = {
+						CreatedOnToolsVersion = 14.1;
+					};
+					08B34B1629243656003F0595 = {
+						CreatedOnToolsVersion = 14.1;
+						TestTargetID = 08B34B0029243655003F0595;
+					};
+					08B34B2029243656003F0595 = {
+						CreatedOnToolsVersion = 14.1;
+						TestTargetID = 08B34B0029243655003F0595;
+					};
+				};
+			};
+			buildConfigurationList = 08B34AFC29243655003F0595 /* Build configuration list for PBXProject "PenumbraiOS" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 08B34AF829243655003F0595;
+			productRefGroup = 08B34B0229243655003F0595 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				08B34B0029243655003F0595 /* PenumbraiOS */,
+				08B34B1629243656003F0595 /* PenumbraiOSTests */,
+				08B34B2029243656003F0595 /* PenumbraiOSUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		08B34AFF29243655003F0595 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				08B34B1129243656003F0595 /* LaunchScreen.storyboard in Resources */,
+				08B34B0E29243656003F0595 /* Assets.xcassets in Resources */,
+				08B34B0C29243655003F0595 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		08B34B1529243656003F0595 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		08B34B1F29243656003F0595 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		08B34AFD29243655003F0595 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				08B34B0929243655003F0595 /* ViewController.swift in Sources */,
+				08B34B0529243655003F0595 /* AppDelegate.swift in Sources */,
+				08B34B0729243655003F0595 /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		08B34B1329243656003F0595 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				08B34B1C29243656003F0595 /* PenumbraiOSTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		08B34B1D29243656003F0595 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				08B34B2829243656003F0595 /* PenumbraiOSUITestsLaunchTests.swift in Sources */,
+				08B34B2629243656003F0595 /* PenumbraiOSUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		08B34B1929243656003F0595 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 08B34B0029243655003F0595 /* PenumbraiOS */;
+			targetProxy = 08B34B1829243656003F0595 /* PBXContainerItemProxy */;
+		};
+		08B34B2329243656003F0595 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 08B34B0029243655003F0595 /* PenumbraiOS */;
+			targetProxy = 08B34B2229243656003F0595 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		08B34B0A29243655003F0595 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				08B34B0B29243655003F0595 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		08B34B0F29243656003F0595 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				08B34B1029243656003F0595 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		08B34B2929243656003F0595 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		08B34B2A29243656003F0595 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		08B34B2C29243656003F0595 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 9SAQ42S589;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = PenumbraiOS/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.vivianphung.PenumbraiOS;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		08B34B2D29243656003F0595 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 9SAQ42S589;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = PenumbraiOS/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.vivianphung.PenumbraiOS;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		08B34B2F29243656003F0595 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 9SAQ42S589;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.vivianphung.PenumbraiOSTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PenumbraiOS.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/PenumbraiOS";
+			};
+			name = Debug;
+		};
+		08B34B3029243656003F0595 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 9SAQ42S589;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.vivianphung.PenumbraiOSTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PenumbraiOS.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/PenumbraiOS";
+			};
+			name = Release;
+		};
+		08B34B3229243656003F0595 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 9SAQ42S589;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.vivianphung.PenumbraiOSUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = PenumbraiOS;
+			};
+			name = Debug;
+		};
+		08B34B3329243656003F0595 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 9SAQ42S589;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.vivianphung.PenumbraiOSUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = PenumbraiOS;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		08B34AFC29243655003F0595 /* Build configuration list for PBXProject "PenumbraiOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				08B34B2929243656003F0595 /* Debug */,
+				08B34B2A29243656003F0595 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		08B34B2B29243656003F0595 /* Build configuration list for PBXNativeTarget "PenumbraiOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				08B34B2C29243656003F0595 /* Debug */,
+				08B34B2D29243656003F0595 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		08B34B2E29243656003F0595 /* Build configuration list for PBXNativeTarget "PenumbraiOSTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				08B34B2F29243656003F0595 /* Debug */,
+				08B34B3029243656003F0595 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		08B34B3129243656003F0595 /* Build configuration list for PBXNativeTarget "PenumbraiOSUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				08B34B3229243656003F0595 /* Debug */,
+				08B34B3329243656003F0595 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 08B34AF929243655003F0595 /* Project object */;
+}
