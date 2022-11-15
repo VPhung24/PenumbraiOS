@@ -15,6 +15,7 @@
 		08B34B1C29243656003F0595 /* PenumbraiOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08B34B1B29243656003F0595 /* PenumbraiOSTests.swift */; };
 		08B34B2629243656003F0595 /* PenumbraiOSUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08B34B2529243656003F0595 /* PenumbraiOSUITests.swift */; };
 		08B34B2829243656003F0595 /* PenumbraiOSUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08B34B2729243656003F0595 /* PenumbraiOSUITestsLaunchTests.swift */; };
+		08B34B3729244C45003F0595 /* swift-proto in Resources */ = {isa = PBXBuildFile; fileRef = 08B34B3629244C45003F0595 /* swift-proto */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		08B34B2129243656003F0595 /* PenumbraiOSUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PenumbraiOSUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		08B34B2529243656003F0595 /* PenumbraiOSUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PenumbraiOSUITests.swift; sourceTree = "<group>"; };
 		08B34B2729243656003F0595 /* PenumbraiOSUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PenumbraiOSUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		08B34B3629244C45003F0595 /* swift-proto */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "swift-proto"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +105,7 @@
 				08B34B0D29243656003F0595 /* Assets.xcassets */,
 				08B34B0F29243656003F0595 /* LaunchScreen.storyboard */,
 				08B34B1229243656003F0595 /* Info.plist */,
+				08B34B3629244C45003F0595 /* swift-proto */,
 			);
 			path = PenumbraiOS;
 			sourceTree = "<group>";
@@ -229,6 +232,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				08B34B1129243656003F0595 /* LaunchScreen.storyboard in Resources */,
+				08B34B3729244C45003F0595 /* swift-proto in Resources */,
 				08B34B0E29243656003F0595 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
