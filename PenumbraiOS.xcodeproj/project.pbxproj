@@ -10,7 +10,6 @@
 		08B34B0529243655003F0595 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08B34B0429243655003F0595 /* AppDelegate.swift */; };
 		08B34B0729243655003F0595 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08B34B0629243655003F0595 /* SceneDelegate.swift */; };
 		08B34B0929243655003F0595 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08B34B0829243655003F0595 /* ViewController.swift */; };
-		08B34B0C29243655003F0595 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 08B34B0A29243655003F0595 /* Main.storyboard */; };
 		08B34B0E29243656003F0595 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 08B34B0D29243656003F0595 /* Assets.xcassets */; };
 		08B34B1129243656003F0595 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 08B34B0F29243656003F0595 /* LaunchScreen.storyboard */; };
 		08B34B1C29243656003F0595 /* PenumbraiOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08B34B1B29243656003F0595 /* PenumbraiOSTests.swift */; };
@@ -40,7 +39,6 @@
 		08B34B0429243655003F0595 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		08B34B0629243655003F0595 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		08B34B0829243655003F0595 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		08B34B0B29243655003F0595 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		08B34B0D29243656003F0595 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		08B34B1029243656003F0595 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		08B34B1229243656003F0595 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -102,7 +100,6 @@
 				08B34B0429243655003F0595 /* AppDelegate.swift */,
 				08B34B0629243655003F0595 /* SceneDelegate.swift */,
 				08B34B0829243655003F0595 /* ViewController.swift */,
-				08B34B0A29243655003F0595 /* Main.storyboard */,
 				08B34B0D29243656003F0595 /* Assets.xcassets */,
 				08B34B0F29243656003F0595 /* LaunchScreen.storyboard */,
 				08B34B1229243656003F0595 /* Info.plist */,
@@ -233,7 +230,6 @@
 			files = (
 				08B34B1129243656003F0595 /* LaunchScreen.storyboard in Resources */,
 				08B34B0E29243656003F0595 /* Assets.xcassets in Resources */,
-				08B34B0C29243655003F0595 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -297,14 +293,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		08B34B0A29243655003F0595 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				08B34B0B29243655003F0595 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		08B34B0F29243656003F0595 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -442,7 +430,6 @@
 				INFOPLIST_FILE = PenumbraiOS/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -470,7 +457,6 @@
 				INFOPLIST_FILE = PenumbraiOS/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
