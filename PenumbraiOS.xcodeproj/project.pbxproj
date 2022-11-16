@@ -16,6 +16,9 @@
 		08B34B2629243656003F0595 /* PenumbraiOSUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08B34B2529243656003F0595 /* PenumbraiOSUITests.swift */; };
 		08B34B2829243656003F0595 /* PenumbraiOSUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08B34B2729243656003F0595 /* PenumbraiOSUITestsLaunchTests.swift */; };
 		08B34B3729244C45003F0595 /* swift-proto in Resources */ = {isa = PBXBuildFile; fileRef = 08B34B3629244C45003F0595 /* swift-proto */; };
+		08B34B49292553E4003F0595 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 08B34B48292553E4003F0595 /* .gitignore */; };
+		08B34B4B292553F3003F0595 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 08B34B4A292553F3003F0595 /* README.md */; };
+		08B34B4D2925540F003F0595 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = 08B34B4C2925540F003F0595 /* .swiftlint.yml */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +52,9 @@
 		08B34B2529243656003F0595 /* PenumbraiOSUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PenumbraiOSUITests.swift; sourceTree = "<group>"; };
 		08B34B2729243656003F0595 /* PenumbraiOSUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PenumbraiOSUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		08B34B3629244C45003F0595 /* swift-proto */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "swift-proto"; sourceTree = "<group>"; };
+		08B34B48292553E4003F0595 /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		08B34B4A292553F3003F0595 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		08B34B4C2925540F003F0595 /* .swiftlint.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +88,9 @@
 				08B34B0329243655003F0595 /* PenumbraiOS */,
 				08B34B1A29243656003F0595 /* PenumbraiOSTests */,
 				08B34B2429243656003F0595 /* PenumbraiOSUITests */,
+				08B34B4A292553F3003F0595 /* README.md */,
+				08B34B48292553E4003F0595 /* .gitignore */,
+				08B34B4C2925540F003F0595 /* .swiftlint.yml */,
 				08B34B0229243655003F0595 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -142,6 +151,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 08B34B2B29243656003F0595 /* Build configuration list for PBXNativeTarget "PenumbraiOS" */;
 			buildPhases = (
+				08B34B4529254EF7003F0595 /* ShellScript */,
 				08B34AFD29243655003F0595 /* Sources */,
 				08B34AFE29243655003F0595 /* Frameworks */,
 				08B34AFF29243655003F0595 /* Resources */,
@@ -151,6 +161,8 @@
 			dependencies = (
 			);
 			name = PenumbraiOS;
+			packageProductDependencies = (
+			);
 			productName = PenumbraiOS;
 			productReference = 08B34B0129243655003F0595 /* PenumbraiOS.app */;
 			productType = "com.apple.product-type.application";
@@ -223,6 +235,8 @@
 				Base,
 			);
 			mainGroup = 08B34AF829243655003F0595;
+			packageReferences = (
+			);
 			productRefGroup = 08B34B0229243655003F0595 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -239,7 +253,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				08B34B4D2925540F003F0595 /* .swiftlint.yml in Resources */,
+				08B34B49292553E4003F0595 /* .gitignore in Resources */,
 				08B34B1129243656003F0595 /* LaunchScreen.storyboard in Resources */,
+				08B34B4B292553F3003F0595 /* README.md in Resources */,
 				08B34B3729244C45003F0595 /* swift-proto in Resources */,
 				08B34B0E29243656003F0595 /* Assets.xcassets in Resources */,
 			);
@@ -260,6 +277,27 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		08B34B4529254EF7003F0595 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "export PATH=\"$PATH:/opt/homebrew/bin\"\nif which swiftlint > /dev/null; then\n  swiftlint --fix && swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		08B34AFD29243655003F0595 /* Sources */ = {

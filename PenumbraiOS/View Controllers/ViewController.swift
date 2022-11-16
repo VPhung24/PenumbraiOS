@@ -11,11 +11,9 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
         title = "Penumbra Custody Service Starter"
         view.backgroundColor = .red
     }
 
-
 }
-
