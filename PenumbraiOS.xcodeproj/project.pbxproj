@@ -101,7 +101,7 @@
 			children = (
 				08B34B0429243655003F0595 /* AppDelegate.swift */,
 				08B34B0629243655003F0595 /* SceneDelegate.swift */,
-				08B34B0829243655003F0595 /* ViewController.swift */,
+				08B34B3929254B6B003F0595 /* View Controllers */,
 				08B34B0D29243656003F0595 /* Assets.xcassets */,
 				08B34B0F29243656003F0595 /* LaunchScreen.storyboard */,
 				08B34B1229243656003F0595 /* Info.plist */,
@@ -125,6 +125,14 @@
 				08B34B2729243656003F0595 /* PenumbraiOSUITestsLaunchTests.swift */,
 			);
 			path = PenumbraiOSUITests;
+			sourceTree = "<group>";
+		};
+		08B34B3929254B6B003F0595 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				08B34B0829243655003F0595 /* ViewController.swift */,
+			);
+			path = "View Controllers";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
