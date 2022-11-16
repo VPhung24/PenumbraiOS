@@ -8,7 +8,7 @@
 import UIKit
 
 class MultilinePlaceholderTextView: UIView, UITextViewDelegate {
-    var placeholderText: String
+    let type: PenumbraFormType
 
     private lazy var textView = UITextView().configured {
         $0.font = UIFont.preferredFont(forTextStyle: .body)
@@ -25,13 +25,12 @@ class MultilinePlaceholderTextView: UIView, UITextViewDelegate {
         $0.adjustsFontForContentSizeCategory = true
         $0.textColor = .label
         $0.backgroundColor = .clear
-        $0.text = placeholderText
         $0.textAlignment = .natural
         $0.textColor = .placeholderText
     }
 
-    init(_ placeholderText: String) {
-        self.placeholderText = placeholderText
+    init(type: PenumbraFormType) {
+        self.type = type
         super.init(frame: .zero)
 
         backgroundColor = .clear
@@ -39,10 +38,14 @@ class MultilinePlaceholderTextView: UIView, UITextViewDelegate {
         addSubviewWithInsets(textView, UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10))
         textView.addSubviewWithInsets(placeholderLabel)
 
-        placeholderLabel.isHidden = !textView.text.isEmpty
+        textView.isEditable = type.textViewIsEditable
+        placeholderLabel.text = type.textViewString
 
-        layer.cornerRadius = 5
-        layer.borderWidth = 1
+        if type == .onboard {
+            placeholderLabel.isHidden = !textView.text.isEmpty
+            layer.cornerRadius = 5
+            layer.borderWidth = 1
+        }
     }
 
     required init?(coder: NSCoder) {

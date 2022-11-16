@@ -7,10 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		081474682925743A00F176B2 /* OnboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 081474672925743A00F176B2 /* OnboardViewController.swift */; };
+		081474682925743A00F176B2 /* PenumbraActionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 081474672925743A00F176B2 /* PenumbraActionView.swift */; };
 		0814746E2925748500F176B2 /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0814746C2925748500F176B2 /* UIView+Extensions.swift */; };
 		0814746F2925748500F176B2 /* Configurable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0814746D2925748500F176B2 /* Configurable.swift */; };
 		081474722925772E00F176B2 /* MultilinePlaceholderTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 081474712925772E00F176B2 /* MultilinePlaceholderTextView.swift */; };
+		0814747629258BF200F176B2 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0814747529258BF200F176B2 /* MainViewController.swift */; };
+		0814747D292590F300F176B2 /* PenumbraFormType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0814747C292590F300F176B2 /* PenumbraFormType.swift */; };
+		0814747F29259E9A00F176B2 /* PenumbraAccessoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0814747E29259E9A00F176B2 /* PenumbraAccessoryView.swift */; };
+		081474812925A24D00F176B2 /* UIStackView+Extentions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 081474802925A24D00F176B2 /* UIStackView+Extentions.swift */; };
 		08B34B0529243655003F0595 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08B34B0429243655003F0595 /* AppDelegate.swift */; };
 		08B34B0729243655003F0595 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08B34B0629243655003F0595 /* SceneDelegate.swift */; };
 		08B34B0E29243656003F0595 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 08B34B0D29243656003F0595 /* Assets.xcassets */; };
@@ -42,10 +46,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		081474672925743A00F176B2 /* OnboardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardViewController.swift; sourceTree = "<group>"; };
+		081474672925743A00F176B2 /* PenumbraActionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PenumbraActionView.swift; sourceTree = "<group>"; };
 		0814746C2925748500F176B2 /* UIView+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Extensions.swift"; sourceTree = "<group>"; };
 		0814746D2925748500F176B2 /* Configurable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Configurable.swift; sourceTree = "<group>"; };
 		081474712925772E00F176B2 /* MultilinePlaceholderTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultilinePlaceholderTextView.swift; sourceTree = "<group>"; };
+		0814747529258BF200F176B2 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		0814747C292590F300F176B2 /* PenumbraFormType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PenumbraFormType.swift; sourceTree = "<group>"; };
+		0814747E29259E9A00F176B2 /* PenumbraAccessoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PenumbraAccessoryView.swift; sourceTree = "<group>"; };
+		081474802925A24D00F176B2 /* UIStackView+Extentions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStackView+Extentions.swift"; sourceTree = "<group>"; };
 		08B34B0129243655003F0595 /* PenumbraiOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PenumbraiOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		08B34B0429243655003F0595 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		08B34B0629243655003F0595 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -93,6 +101,7 @@
 			children = (
 				0814746C2925748500F176B2 /* UIView+Extensions.swift */,
 				0814746D2925748500F176B2 /* Configurable.swift */,
+				081474802925A24D00F176B2 /* UIStackView+Extentions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -101,8 +110,18 @@
 			isa = PBXGroup;
 			children = (
 				081474712925772E00F176B2 /* MultilinePlaceholderTextView.swift */,
+				081474672925743A00F176B2 /* PenumbraActionView.swift */,
+				0814747E29259E9A00F176B2 /* PenumbraAccessoryView.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		0814747B292590D000F176B2 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				0814747C292590F300F176B2 /* PenumbraFormType.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 		08B34AF829243655003F0595 = {
@@ -136,6 +155,7 @@
 				08B34B3929254B6B003F0595 /* View Controllers */,
 				0814746B2925748500F176B2 /* Extensions */,
 				08147470292576FF00F176B2 /* Views */,
+				0814747B292590D000F176B2 /* Models */,
 				08B34B0D29243656003F0595 /* Assets.xcassets */,
 				08B34B0F29243656003F0595 /* LaunchScreen.storyboard */,
 				08B34B1229243656003F0595 /* Info.plist */,
@@ -164,7 +184,7 @@
 		08B34B3929254B6B003F0595 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				081474672925743A00F176B2 /* OnboardViewController.swift */,
+				0814747529258BF200F176B2 /* MainViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -329,12 +349,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0814747F29259E9A00F176B2 /* PenumbraAccessoryView.swift in Sources */,
 				0814746F2925748500F176B2 /* Configurable.swift in Sources */,
+				081474812925A24D00F176B2 /* UIStackView+Extentions.swift in Sources */,
 				08B34B0529243655003F0595 /* AppDelegate.swift in Sources */,
-				081474682925743A00F176B2 /* OnboardViewController.swift in Sources */,
+				081474682925743A00F176B2 /* PenumbraActionView.swift in Sources */,
 				081474722925772E00F176B2 /* MultilinePlaceholderTextView.swift in Sources */,
 				0814746E2925748500F176B2 /* UIView+Extensions.swift in Sources */,
 				08B34B0729243655003F0595 /* SceneDelegate.swift in Sources */,
+				0814747D292590F300F176B2 /* PenumbraFormType.swift in Sources */,
+				0814747629258BF200F176B2 /* MainViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
