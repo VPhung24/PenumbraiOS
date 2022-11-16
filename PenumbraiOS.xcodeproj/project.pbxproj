@@ -7,9 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		081474682925743A00F176B2 /* OnboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 081474672925743A00F176B2 /* OnboardViewController.swift */; };
+		0814746E2925748500F176B2 /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0814746C2925748500F176B2 /* UIView+Extensions.swift */; };
+		0814746F2925748500F176B2 /* Configurable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0814746D2925748500F176B2 /* Configurable.swift */; };
 		08B34B0529243655003F0595 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08B34B0429243655003F0595 /* AppDelegate.swift */; };
 		08B34B0729243655003F0595 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08B34B0629243655003F0595 /* SceneDelegate.swift */; };
-		08B34B0929243655003F0595 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08B34B0829243655003F0595 /* ViewController.swift */; };
 		08B34B0E29243656003F0595 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 08B34B0D29243656003F0595 /* Assets.xcassets */; };
 		08B34B1129243656003F0595 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 08B34B0F29243656003F0595 /* LaunchScreen.storyboard */; };
 		08B34B1C29243656003F0595 /* PenumbraiOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08B34B1B29243656003F0595 /* PenumbraiOSTests.swift */; };
@@ -39,10 +41,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		081474672925743A00F176B2 /* OnboardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardViewController.swift; sourceTree = "<group>"; };
+		0814746C2925748500F176B2 /* UIView+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Extensions.swift"; sourceTree = "<group>"; };
+		0814746D2925748500F176B2 /* Configurable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Configurable.swift; sourceTree = "<group>"; };
 		08B34B0129243655003F0595 /* PenumbraiOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PenumbraiOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		08B34B0429243655003F0595 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		08B34B0629243655003F0595 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		08B34B0829243655003F0595 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		08B34B0D29243656003F0595 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		08B34B1029243656003F0595 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		08B34B1229243656003F0595 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -82,6 +86,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0814746B2925748500F176B2 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				0814746C2925748500F176B2 /* UIView+Extensions.swift */,
+				0814746D2925748500F176B2 /* Configurable.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		08B34AF829243655003F0595 = {
 			isa = PBXGroup;
 			children = (
@@ -111,6 +124,7 @@
 				08B34B0429243655003F0595 /* AppDelegate.swift */,
 				08B34B0629243655003F0595 /* SceneDelegate.swift */,
 				08B34B3929254B6B003F0595 /* View Controllers */,
+				0814746B2925748500F176B2 /* Extensions */,
 				08B34B0D29243656003F0595 /* Assets.xcassets */,
 				08B34B0F29243656003F0595 /* LaunchScreen.storyboard */,
 				08B34B1229243656003F0595 /* Info.plist */,
@@ -139,7 +153,7 @@
 		08B34B3929254B6B003F0595 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				08B34B0829243655003F0595 /* ViewController.swift */,
+				081474672925743A00F176B2 /* OnboardViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -304,8 +318,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				08B34B0929243655003F0595 /* ViewController.swift in Sources */,
+				0814746F2925748500F176B2 /* Configurable.swift in Sources */,
 				08B34B0529243655003F0595 /* AppDelegate.swift in Sources */,
+				081474682925743A00F176B2 /* OnboardViewController.swift in Sources */,
+				0814746E2925748500F176B2 /* UIView+Extensions.swift in Sources */,
 				08B34B0729243655003F0595 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
