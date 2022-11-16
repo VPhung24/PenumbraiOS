@@ -17,15 +17,7 @@ class OnboardViewController: UIViewController {
         $0.numberOfLines = 0
     }
 
-    lazy var textView = UITextView().configured {
-        $0.adjustsFontForContentSizeCategory = true
-        $0.textColor = .label
-        // UITextView -- multi-line txt fields -- dont have a placeholder. next: subclasses UITextView
-        $0.text = "[temp wrappable placeholder] word0 word1 word2 word3 word4 word5..."
-        $0.backgroundColor = .clear
-        $0.layer.cornerRadius = 5
-        $0.layer.borderWidth = 1
-    }
+    lazy var textView = MultilinePlaceholderTextView("word0 word1 word2 word3...")
 
     lazy var submitButton = UIButton().configured {
         $0.setTitle("submit", for: .normal)
