@@ -12,6 +12,7 @@ disabled_rules:
 
 excluded:
   - PenumbraiOS/swift-proto
+  - PenumbraiOSProtos/.build
 
 custom_rules:
   restrict_non_ascii:

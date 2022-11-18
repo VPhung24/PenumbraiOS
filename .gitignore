@@ -100,3 +100,14 @@ PenumbraiOS.xcodeproj/*
 PenumbraiOS.entitlements
 Info.plist
 PenumbraiOS/Assets.xcassets/AppIcon.appiconset/*.png
+
+.DS_Store
+/.build
+/Packages
+/*.xcodeproj
+xcuserdata/
+DerivedData/
+.swiftpm/config/registries.json
+.swiftpm/xcode/package.xcworkspace/contents.xcworkspacedata
+.netrc
+*.resolved

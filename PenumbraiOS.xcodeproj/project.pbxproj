@@ -16,6 +16,7 @@
 		0814747F29259E9A00F176B2 /* PenumbraAccessoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0814747E29259E9A00F176B2 /* PenumbraAccessoryView.swift */; };
 		081474812925A24D00F176B2 /* UIStackView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 081474802925A24D00F176B2 /* UIStackView+Extensions.swift */; };
 		081477CD29273F7400F176B2 /* UIEdgeInsets+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 081477CC29273F7400F176B2 /* UIEdgeInsets+Extensions.swift */; };
+		0869FDBF2927679700B9F6ED /* PenumbraiOSProtos.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0869FD692927582300B9F6ED /* PenumbraiOSProtos.swift */; };
 		08B34B0529243655003F0595 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08B34B0429243655003F0595 /* AppDelegate.swift */; };
 		08B34B0729243655003F0595 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08B34B0629243655003F0595 /* SceneDelegate.swift */; };
 		08B34B0E29243656003F0595 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 08B34B0D29243656003F0595 /* Assets.xcassets */; };
@@ -46,6 +47,18 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		0869FDB3292765A400B9F6ED /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/$(PRODUCT_NAME)";
+			dstSubfolderSpec = 16;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		081474672925743A00F176B2 /* PenumbraActionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PenumbraActionView.swift; sourceTree = "<group>"; };
 		0814746C2925748500F176B2 /* UIView+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Extensions.swift"; sourceTree = "<group>"; };
@@ -56,6 +69,11 @@
 		0814747E29259E9A00F176B2 /* PenumbraAccessoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PenumbraAccessoryView.swift; sourceTree = "<group>"; };
 		081474802925A24D00F176B2 /* UIStackView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStackView+Extensions.swift"; sourceTree = "<group>"; };
 		081477CC29273F7400F176B2 /* UIEdgeInsets+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIEdgeInsets+Extensions.swift"; sourceTree = "<group>"; };
+		0869FD692927582300B9F6ED /* PenumbraiOSProtos.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PenumbraiOSProtos.swift; sourceTree = "<group>"; };
+		0869FD6E2927582300B9F6ED /* Package.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
+		0869FDAB2927610A00B9F6ED /* PenumbraiOSProtosTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PenumbraiOSProtosTests.swift; sourceTree = "<group>"; };
+		0869FDB5292765A400B9F6ED /* libPenumbraiOSProtos.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPenumbraiOSProtos.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		0869FDC12927681000B9F6ED /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Platforms/iPhoneOS.platform/Developer/Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		08B34B0129243655003F0595 /* PenumbraiOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PenumbraiOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		08B34B0429243655003F0595 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		08B34B0629243655003F0595 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -74,6 +92,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		0869FDB2292765A400B9F6ED /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		08B34AFE29243655003F0595 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -127,16 +152,68 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
+		0869FD672927582300B9F6ED /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				0869FD682927582300B9F6ED /* PenumbraiOSProtos */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		0869FD682927582300B9F6ED /* PenumbraiOSProtos */ = {
+			isa = PBXGroup;
+			children = (
+				0869FD692927582300B9F6ED /* PenumbraiOSProtos.swift */,
+			);
+			path = PenumbraiOSProtos;
+			sourceTree = "<group>";
+		};
+		0869FD6B2927582300B9F6ED /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				0869FD6C2927582300B9F6ED /* PenumbraiOSProtosTests */,
+			);
+			path = Tests;
+			sourceTree = "<group>";
+		};
+		0869FD6C2927582300B9F6ED /* PenumbraiOSProtosTests */ = {
+			isa = PBXGroup;
+			children = (
+				0869FDAB2927610A00B9F6ED /* PenumbraiOSProtosTests.swift */,
+			);
+			path = PenumbraiOSProtosTests;
+			sourceTree = "<group>";
+		};
+		0869FDB6292765A400B9F6ED /* PenumbraiOSProtos */ = {
+			isa = PBXGroup;
+			children = (
+				0869FD6E2927582300B9F6ED /* Package.swift */,
+				0869FD672927582300B9F6ED /* Sources */,
+				0869FD6B2927582300B9F6ED /* Tests */,
+			);
+			path = PenumbraiOSProtos;
+			sourceTree = "<group>";
+		};
+		0869FDC02927681000B9F6ED /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0869FDC12927681000B9F6ED /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		08B34AF829243655003F0595 = {
 			isa = PBXGroup;
 			children = (
 				08B34B0329243655003F0595 /* PenumbraiOS */,
 				08B34B1A29243656003F0595 /* PenumbraiOSTests */,
 				08B34B2429243656003F0595 /* PenumbraiOSUITests */,
+				0869FDB6292765A400B9F6ED /* PenumbraiOSProtos */,
 				08B34B4A292553F3003F0595 /* README.md */,
 				08B34B48292553E4003F0595 /* .gitignore */,
 				08B34B4C2925540F003F0595 /* .swiftlint.yml */,
 				08B34B0229243655003F0595 /* Products */,
+				0869FDC02927681000B9F6ED /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -146,6 +223,7 @@
 				08B34B0129243655003F0595 /* PenumbraiOS.app */,
 				08B34B1729243656003F0595 /* PenumbraiOSTests.xctest */,
 				08B34B2129243656003F0595 /* PenumbraiOSUITests.xctest */,
+				0869FDB5292765A400B9F6ED /* libPenumbraiOSProtos.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -195,6 +273,23 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		0869FDB4292765A400B9F6ED /* PenumbraiOSProtos */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0869FDB9292765A400B9F6ED /* Build configuration list for PBXNativeTarget "PenumbraiOSProtos" */;
+			buildPhases = (
+				0869FDB1292765A400B9F6ED /* Sources */,
+				0869FDB2292765A400B9F6ED /* Frameworks */,
+				0869FDB3292765A400B9F6ED /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PenumbraiOSProtos;
+			productName = PenumbraiOSProtos;
+			productReference = 0869FDB5292765A400B9F6ED /* libPenumbraiOSProtos.a */;
+			productType = "com.apple.product-type.library.static";
+		};
 		08B34B0029243655003F0595 /* PenumbraiOS */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 08B34B2B29243656003F0595 /* Build configuration list for PBXNativeTarget "PenumbraiOS" */;
@@ -261,6 +356,9 @@
 				LastSwiftUpdateCheck = 1410;
 				LastUpgradeCheck = 1410;
 				TargetAttributes = {
+					0869FDB4292765A400B9F6ED = {
+						CreatedOnToolsVersion = 14.1;
+					};
 					08B34B0029243655003F0595 = {
 						CreatedOnToolsVersion = 14.1;
 					};
@@ -292,6 +390,7 @@
 				08B34B0029243655003F0595 /* PenumbraiOS */,
 				08B34B1629243656003F0595 /* PenumbraiOSTests */,
 				08B34B2029243656003F0595 /* PenumbraiOSUITests */,
+				0869FDB4292765A400B9F6ED /* PenumbraiOSProtos */,
 			);
 		};
 /* End PBXProject section */
@@ -348,6 +447,14 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		0869FDB1292765A400B9F6ED /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0869FDBF2927679700B9F6ED /* PenumbraiOSProtos.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		08B34AFD29243655003F0595 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -410,6 +517,34 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		0869FDBA292765A400B9F6ED /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 9SAQ42S589;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		0869FDBB292765A400B9F6ED /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 9SAQ42S589;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 		08B34B2929243656003F0595 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -657,6 +792,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		0869FDB9292765A400B9F6ED /* Build configuration list for PBXNativeTarget "PenumbraiOSProtos" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0869FDBA292765A400B9F6ED /* Debug */,
+				0869FDBB292765A400B9F6ED /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		08B34AFC29243655003F0595 /* Build configuration list for PBXProject "PenumbraiOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
