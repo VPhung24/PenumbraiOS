@@ -35,7 +35,7 @@ class MultilinePlaceholderTextView: UIView, UITextViewDelegate {
 
         backgroundColor = .clear
 
-        addSubviewWithInsets(textView, UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10))
+        addSubviewWithInsets(textView, UIEdgeInsets(10))
         textView.addSubviewWithInsets(placeholderLabel)
 
         textView.isEditable = type.textViewIsEditable
