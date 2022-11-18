@@ -89,10 +89,14 @@ fastlane/test_output
 # https://github.com/johnno1962/injectionforxcode
 
 iOSInjectionProject/
-NfcWriter/Config.xcconfig
+
+# PenumbraiOS 
 .DS_Store
-GoogleService-Info.plist
 Gemfile
 Gemfile.lock
 fastlane
 screenshots
+PenumbraiOS.xcodeproj/*
+PenumbraiOS.entitlements
+Info.plist
+PenumbraiOS/Assets.xcassets/AppIcon.appiconset/*.png
