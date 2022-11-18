@@ -27,7 +27,7 @@ class PenumbraActionView: UIView {
         backgroundColor = .systemBackground
 
         let textView = MultilinePlaceholderTextView(type: sheetType)
-        let buttonStackView = UIStackView(arrangedSubViews: [], axis: .horizontal, distribution: .fillEqually)
+        let buttonStackView = UIStackView(axis: .horizontal, distribution: .fillEqually)
 
         sheetType.accessoryButtons.forEach { type in
             buttonStackView.addArrangedSubview(PenumbraAccessoryView(type: type, delegate: delegate))

@@ -14,7 +14,8 @@
 		0814747629258BF200F176B2 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0814747529258BF200F176B2 /* MainViewController.swift */; };
 		0814747D292590F300F176B2 /* PenumbraFormType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0814747C292590F300F176B2 /* PenumbraFormType.swift */; };
 		0814747F29259E9A00F176B2 /* PenumbraAccessoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0814747E29259E9A00F176B2 /* PenumbraAccessoryView.swift */; };
-		081474812925A24D00F176B2 /* UIStackView+Extentions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 081474802925A24D00F176B2 /* UIStackView+Extentions.swift */; };
+		081474812925A24D00F176B2 /* UIStackView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 081474802925A24D00F176B2 /* UIStackView+Extensions.swift */; };
+		081477CD29273F7400F176B2 /* UIEdgeInsets+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 081477CC29273F7400F176B2 /* UIEdgeInsets+Extensions.swift */; };
 		08B34B0529243655003F0595 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08B34B0429243655003F0595 /* AppDelegate.swift */; };
 		08B34B0729243655003F0595 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08B34B0629243655003F0595 /* SceneDelegate.swift */; };
 		08B34B0E29243656003F0595 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 08B34B0D29243656003F0595 /* Assets.xcassets */; };
@@ -53,7 +54,8 @@
 		0814747529258BF200F176B2 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		0814747C292590F300F176B2 /* PenumbraFormType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PenumbraFormType.swift; sourceTree = "<group>"; };
 		0814747E29259E9A00F176B2 /* PenumbraAccessoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PenumbraAccessoryView.swift; sourceTree = "<group>"; };
-		081474802925A24D00F176B2 /* UIStackView+Extentions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStackView+Extentions.swift"; sourceTree = "<group>"; };
+		081474802925A24D00F176B2 /* UIStackView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStackView+Extensions.swift"; sourceTree = "<group>"; };
+		081477CC29273F7400F176B2 /* UIEdgeInsets+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIEdgeInsets+Extensions.swift"; sourceTree = "<group>"; };
 		08B34B0129243655003F0595 /* PenumbraiOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PenumbraiOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		08B34B0429243655003F0595 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		08B34B0629243655003F0595 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -99,9 +101,10 @@
 		0814746B2925748500F176B2 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				0814746C2925748500F176B2 /* UIView+Extensions.swift */,
 				0814746D2925748500F176B2 /* Configurable.swift */,
-				081474802925A24D00F176B2 /* UIStackView+Extentions.swift */,
+				0814746C2925748500F176B2 /* UIView+Extensions.swift */,
+				081474802925A24D00F176B2 /* UIStackView+Extensions.swift */,
+				081477CC29273F7400F176B2 /* UIEdgeInsets+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -351,11 +354,12 @@
 			files = (
 				0814747F29259E9A00F176B2 /* PenumbraAccessoryView.swift in Sources */,
 				0814746F2925748500F176B2 /* Configurable.swift in Sources */,
-				081474812925A24D00F176B2 /* UIStackView+Extentions.swift in Sources */,
+				081474812925A24D00F176B2 /* UIStackView+Extensions.swift in Sources */,
 				08B34B0529243655003F0595 /* AppDelegate.swift in Sources */,
 				081474682925743A00F176B2 /* PenumbraActionView.swift in Sources */,
 				081474722925772E00F176B2 /* MultilinePlaceholderTextView.swift in Sources */,
 				0814746E2925748500F176B2 /* UIView+Extensions.swift in Sources */,
+				081477CD29273F7400F176B2 /* UIEdgeInsets+Extensions.swift in Sources */,
 				08B34B0729243655003F0595 /* SceneDelegate.swift in Sources */,
 				0814747D292590F300F176B2 /* PenumbraFormType.swift in Sources */,
 				0814747629258BF200F176B2 /* MainViewController.swift in Sources */,
