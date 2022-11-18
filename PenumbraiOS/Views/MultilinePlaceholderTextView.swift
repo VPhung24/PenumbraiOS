@@ -8,7 +8,7 @@
 import UIKit
 
 class MultilinePlaceholderTextView: UIView, UITextViewDelegate {
-    let type: PenumbraFormType
+    private let type: PenumbraFormType
 
     private lazy var textView = UITextView().configured {
         $0.font = UIFont.preferredFont(forTextStyle: .body)

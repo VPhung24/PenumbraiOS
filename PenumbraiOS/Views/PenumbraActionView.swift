@@ -8,10 +8,10 @@
 import UIKit
 
 class PenumbraActionView: UIView {
-    let sheetType: PenumbraFormType
-    weak var delegate: PenumbraAccessoryViewDelegate?
+    private let sheetType: PenumbraFormType
+    private weak var delegate: PenumbraAccessoryViewDelegate?
 
-    lazy var titleLabel = UILabel().configured {
+    private lazy var titleLabel = UILabel().configured {
         $0.font = UIFont.preferredFont(forTextStyle: .subheadline)
         $0.text = sheetType.titleLabelString
         $0.adjustsFontForContentSizeCategory = true

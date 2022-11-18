@@ -15,6 +15,7 @@ class MainViewController: UIViewController {
         title = "Account 1 Name"
         view.backgroundColor = .systemBackground
 
+        // TODO: animation and custom bottom sheet
         let mockBottomSheet = UIView(frame: .zero)
         let bottomSheetTest = PenumbraActionView(bottomSheetType: .request, delegate: self)
 

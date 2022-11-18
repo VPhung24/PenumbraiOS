@@ -8,8 +8,8 @@
 import UIKit
 
 class PenumbraAccessoryView: UIView {
-    let type: PenumbraAccessoryType
-    weak var delegate: PenumbraAccessoryViewDelegate?
+    private let type: PenumbraAccessoryType
+    private weak var delegate: PenumbraAccessoryViewDelegate?
 
     private lazy var accessoryView = UIButton().configured {
         $0.setTitle(type.rawValue, for: .normal)
@@ -31,7 +31,7 @@ class PenumbraAccessoryView: UIView {
         fatalError("init(coder:) has not been implemented")
     }
 
-    @objc func accessoryTapped() {
+    @objc private func accessoryTapped() {
         self.delegate?.accessoryTapped(type: type)
     }
 }
