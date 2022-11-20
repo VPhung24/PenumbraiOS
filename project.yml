@@ -73,12 +73,17 @@ targets:
   PenumbraiOSUITests:
     name: PenumbraiOSUITests
     type: bundle.ui-testing
+    scheme: {}
     dependencies:
       - target: PenumbraiOS
     deploymentTarget: "14.0"
     platform: iOS
     settings:
       base:
+        INFOPLIST_FILE: Info.plist
+        PRODUCT_BUNDLE_IDENTIFIER: com.vivianphung.PenumbraiOSProtos
+        TARGETED_DEVICE_FAMILY: 1
+        DEVELOPMENT_TEAM: FG655QY4XD
         SWIFT_VERSION: 5.2
     sources: [PenumbraiOSUITests]
         
