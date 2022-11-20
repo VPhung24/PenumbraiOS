@@ -87,6 +87,10 @@ targets:
         DEVELOPMENT_TEAM: FG655QY4XD
         SWIFT_VERSION: 5.2
     sources: [PenumbraiOSUITests]
+    postCompileScripts:
+      - script: /opt/homebrew/bin/swiftlint
+        name: Run SwiftLint
+        basedOnDependencyAnalysis: false
 
   ### PenumbraiOSProtos framework
 
@@ -115,6 +119,10 @@ targets:
         TARGETED_DEVICE_FAMILY: 1
         DEVELOPMENT_TEAM: FG655QY4XD
         SWIFT_VERSION: 5.2
+    postCompileScripts:
+      - script: /opt/homebrew/bin/swiftlint
+        name: Run SwiftLint
+        basedOnDependencyAnalysis: false
   #    preBuildScripts:
   #      - script: tools/scripts/generateProtos.sh
   #        name: My Script
@@ -137,3 +145,7 @@ targets:
         SWIFT_VERSION: 5.2
     scheme: {}
     sources: [PenumbraiOSProtosTests]
+    postCompileScripts:
+      - script: /opt/homebrew/bin/swiftlint
+        name: Run SwiftLint
+        basedOnDependencyAnalysis: false
