@@ -9,6 +9,8 @@ packages:
     url: https://github.com/grpc/grpc-swift.git
     from: 1.13.0
 targets:
+
+### PenumbraiOS App
   PenumbraiOS:
     name: PenumbraiOS
     type: application
@@ -48,7 +50,11 @@ targets:
             UIWindowSceneSessionRoleApplication:
               - UISceneConfigurationName: Default Configuration
                 UISceneDelegateClassName: $(PRODUCT_MODULE_NAME).SceneDelegate
-    scheme: {}
+    scheme:
+      gatherCoverageData: true
+      testTargets:
+        - name: PenumbraiOSUITests
+          randomExecutionOrder: true
     settings:
       base:
         TARGETED_DEVICE_FAMILY: 1 # iphone only
@@ -61,6 +67,23 @@ targets:
       - script: /opt/homebrew/bin/swiftlint
         name: Run SwiftLint
         basedOnDependencyAnalysis: false
+
+### PenumbraiOSUITests (will use for fastlane)
+  
+  PenumbraiOSUITests:
+    name: PenumbraiOSUITests
+    type: bundle.ui-testing
+    dependencies:
+      - target: PenumbraiOS
+    deploymentTarget: "14.0"
+    platform: iOS
+    settings:
+      base:
+        SWIFT_VERSION: 5.2
+    sources: [PenumbraiOSUITests]
+        
+### PenumbraiOSProtos framework
+
   PenumbraiOSProtos:
     name: PenumbraiOSProtos
     type: framework
