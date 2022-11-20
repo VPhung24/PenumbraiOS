@@ -16,7 +16,7 @@ targets:
     deploymentTarget: "14.0"
     sources:
       - path: "PenumbraiOS"
-        name: "Code"
+        name: "PenumbraiOS"
       - path: "README.md"
         buildPhase: none
       - path: "CHANGELOG.md"
