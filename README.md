@@ -6,6 +6,7 @@
 - [XcodeGen](https://github.com/yonaskolb/XcodeGen)
 
 in the project directory, run
+
 ```
 ./start
 ```
@@ -21,17 +22,19 @@ brew install xcodegen
 ```
 
 in the projects directory,
+
 ```
 xcodegen generate
 ```
 
 then open the project via
+
 ```
 open PenumbraiOS.xcodeproj
-
 ```
 
 which is pretty much the bash executable `start`. run this after `project.yml` config changes
+
 ```
 ./start
 ```
@@ -42,9 +45,7 @@ which is pretty much the bash executable `start`. run this after `project.yml` c
 brew install swiftlint
 ```
 
-for swift protobuf,
-
-install swift-proto
+### [swift-protobuf](https://github.com/apple/swift-protobuf)
 
 ```
 brew install swift-protobuf
@@ -59,5 +60,3 @@ mkdir swift_proto
 protoc --swift_out=swift_proto --proto_path=./proto --proto_path=./ibc-go-vendor --swift_opt=FileNaming=PathToUnderscores --swift_opt=Visibility=public -Iproto/ $(find . -type f \( -name "*.proto" \))
 rm -f swift_proto/google_protobuf_any.pb.swift
 ```
-
-
