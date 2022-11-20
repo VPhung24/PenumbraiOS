@@ -9,8 +9,7 @@ packages:
     url: https://github.com/grpc/grpc-swift.git
     from: 1.13.0
 targets:
-
-### PenumbraiOS App
+  ### PenumbraiOS App
   PenumbraiOS:
     name: PenumbraiOS
     type: application
@@ -32,8 +31,6 @@ targets:
     info:
       path: Info.plist
       properties:
-        NSPhotoLibraryUsageDescription: "The app reads your photos to send them to Dropbox"
-        LSApplicationCategoryType: public.app-category.developer-tools
         UILaunchScreen:
           UIColorName: LaunchBackground
           UIImageName: AppIcon
@@ -55,6 +52,8 @@ targets:
       testTargets:
         - name: PenumbraiOSUITests
           randomExecutionOrder: true
+        - name: PenumbraiOSProtosTests
+          randomExecutionOrder: true
     settings:
       base:
         TARGETED_DEVICE_FAMILY: 1 # iphone only
@@ -63,13 +62,15 @@ targets:
         SWIFT_VERSION: 5.2
       debug:
       release:
+    dependencies:
+      - target: PenumbraiOSProtos
     postCompileScripts:
       - script: /opt/homebrew/bin/swiftlint
         name: Run SwiftLint
         basedOnDependencyAnalysis: false
 
-### PenumbraiOSUITests (will use for fastlane)
-  
+  ### PenumbraiOSUITests (will use for fastlane)
+
   PenumbraiOSUITests:
     name: PenumbraiOSUITests
     type: bundle.ui-testing
@@ -81,13 +82,13 @@ targets:
     settings:
       base:
         INFOPLIST_FILE: Info.plist
-        PRODUCT_BUNDLE_IDENTIFIER: com.vivianphung.PenumbraiOSProtos
+        PRODUCT_BUNDLE_IDENTIFIER: com.vivianphung.PenumbraiOSUITests
         TARGETED_DEVICE_FAMILY: 1
         DEVELOPMENT_TEAM: FG655QY4XD
         SWIFT_VERSION: 5.2
     sources: [PenumbraiOSUITests]
-        
-### PenumbraiOSProtos framework
+
+  ### PenumbraiOSProtos framework
 
   PenumbraiOSProtos:
     name: PenumbraiOSProtos
@@ -102,14 +103,37 @@ targets:
     dependencies:
       - package: SwiftProtobuf
       - package: GRPC
-    scheme: {}
+    scheme:
+      gatherCoverageData: true
+      testTargets:
+        - name: PenumbraiOSProtosTests
+          randomExecutionOrder: true
     settings:
       base:
         INFOPLIST_FILE: Info.plist
         PRODUCT_BUNDLE_IDENTIFIER: com.vivianphung.PenumbraiOSProtos
         TARGETED_DEVICE_FAMILY: 1
         DEVELOPMENT_TEAM: FG655QY4XD
-#    preBuildScripts:
-#      - script: tools/scripts/generateProtos.sh
-#        name: My Script
+        SWIFT_VERSION: 5.2
+  #    preBuildScripts:
+  #      - script: tools/scripts/generateProtos.sh
+  #        name: My Script
 
+  ### PenumbraiOSProtosTests
+
+  PenumbraiOSProtosTests:
+    name: PenumbraiOSProtosTests
+    type: bundle.unit-test
+    dependencies:
+      - target: PenumbraiOSProtos
+    deploymentTarget: "14.0"
+    platform: iOS
+    settings:
+      base:
+        INFOPLIST_FILE: Info.plist
+        PRODUCT_BUNDLE_IDENTIFIER: com.vivianphung.PenumbraiOSProtosTests
+        TARGETED_DEVICE_FAMILY: 1
+        DEVELOPMENT_TEAM: FG655QY4XD
+        SWIFT_VERSION: 5.2
+    scheme: {}
+    sources: [PenumbraiOSProtosTests]
