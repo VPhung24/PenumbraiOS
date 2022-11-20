@@ -1,0 +1,87 @@
+name: PenumbraiOS
+options:
+  bundleIdPrefix: com.vivianphung
+packages:
+  SwiftProtobuf:
+    url: https://github.com/apple/swift-protobuf.git
+    from: 1.20.3
+  GRPC:
+    url: https://github.com/grpc/grpc-swift.git
+    from: 1.13.0
+targets:
+  PenumbraiOS:
+    name: PenumbraiOS
+    type: application
+    platform: iOS
+    deploymentTarget: "14.0"
+    sources:
+      - path: "PenumbraiOS"
+        name: "Code"
+      - path: "README.md"
+        buildPhase: none
+      - path: "CHANGELOG.md"
+        buildPhase: none
+      - path: "project.yml"
+        buildPhase: none
+      - path: ".swiftlint.yml"
+        buildPhase: none
+      - path: "Info.plist"
+        buildPhase: none
+    info:
+      path: Info.plist
+      properties:
+        NSPhotoLibraryUsageDescription: "The app reads your photos to send them to Dropbox"
+        LSApplicationCategoryType: public.app-category.developer-tools
+        UILaunchScreen:
+          UIColorName: LaunchBackground
+          UIImageName: AppIcon
+        CFBundleShortVersionString: "1"
+        CFBundleVersion: "1.0"
+        ITSAppUsesNonExemptEncryption: false
+        UIStatusBarStyle: UIStatusBarStyleLightContent
+        UIViewControllerBasedStatusBarAppearance: true
+        UISupportedInterfaceOrientations:
+          - UIInterfaceOrientationPortrait
+        UIApplicationSceneManifest:
+          UIApplicationSupportsMultipleScenes: false
+          UISceneConfigurations:
+            UIWindowSceneSessionRoleApplication:
+              - UISceneConfigurationName: Default Configuration
+                UISceneDelegateClassName: $(PRODUCT_MODULE_NAME).SceneDelegate
+    scheme: {}
+    settings:
+      base:
+        TARGETED_DEVICE_FAMILY: 1 # iphone only
+        PRODUCT_BUNDLE_IDENTIFIER: com.vivianphung.PenumbraiOS
+        DEVELOPMENT_TEAM: FG655QY4XD
+        SWIFT_VERSION: 5.2
+      debug:
+      release:
+    postCompileScripts:
+      - script: /opt/homebrew/bin/swiftlint
+        name: Run SwiftLint
+        basedOnDependencyAnalysis: false
+  PenumbraiOSProtos:
+    name: PenumbraiOSProtos
+    type: framework
+    platform: iOS
+    deploymentTarget: "14.0"
+    sources:
+      - path: "PenumbraiOSProtos"
+        name: "PenumbraiOSProtos"
+      - path: "tools"
+        name: "tools"
+    dependencies:
+      - package: SwiftProtobuf
+      - package: GRPC
+    scheme: {}
+    settings:
+      base:
+        INFOPLIST_FILE: Info.plist
+        PRODUCT_BUNDLE_IDENTIFIER: com.vivianphung.PenumbraiOSProtos
+        TARGETED_DEVICE_FAMILY: 1
+        DEVELOPMENT_TEAM: FG655QY4XD
+#    preBuildScripts:
+#      - script: tools/scripts/generateProtos.sh
+#        name: My Script
+
