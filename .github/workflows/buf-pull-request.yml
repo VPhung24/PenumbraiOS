@@ -27,19 +27,23 @@ jobs:
           # N.B. the major version is omitted in the download URLs,
           # so "21.8" actually means "3.21.8".
           PROTOC_VERSION: "21.8"
+      - name: install swift protos dependencies
+        uses: ConorMacBride/install-package@v1.1.0
+        with: 
+          brew: swift-protobuf grpc-swift
 
       # N.B. The freshness check can have false negatives, if `prost` output
       # is superficially but not substantively different. That's OK for now:
       # we're aiming to keep the defs in sync, and manual maintenance is required.
-      - name: Compile protobuf specs into swift src files
+      - name: swift protos
         shell: bash
         run: |
-          cd tools/proto-compiler
-          cargo run
-          if ! git diff --quiet; then
-              echo "ERROR: protobuf files must be regenerated and committed:"
-              git diff --stat
-              exit 1
-          else
-              echo "OK: no changes required to protobuf specs"
-          fi
+          cd penumbra/proto/
+          mkdir swift_proto
+          protoc --swift_out=swift_proto \
+          --proto_path=./proto --proto_path=./ibc-go-vendor \
+          --swift_opt=FileNaming=PathToUnderscores \ 
+          --swift_opt=Visibility=public -Iproto/ \
+          $(find . -type f \( -name "*.proto" \))
+          cd swift_proto
+          ls
