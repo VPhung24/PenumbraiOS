@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import VivUIExtensions
 
 class PenumbraAccessoryView: UIView {
     private let type: PenumbraAccessoryType

@@ -8,6 +8,9 @@ packages:
   GRPC:
     url: https://github.com/grpc/grpc-swift.git
     from: 1.13.0
+  VivUIExtensions:
+    url: https://github.com/VPhung24/VivUIExtensions.git
+    from: 1.0.1
 targets:
   ### PenumbraiOS App
   PenumbraiOS:
@@ -64,6 +67,7 @@ targets:
       release:
     dependencies:
       - target: PenumbraiOSProtos
+      - package: VivUIExtensions
     postCompileScripts:
       - script: /opt/homebrew/bin/swiftlint
         name: Run SwiftLint
@@ -123,9 +127,9 @@ targets:
       - script: /opt/homebrew/bin/swiftlint
         name: Run SwiftLint
         basedOnDependencyAnalysis: false
-  #    preBuildScripts:
-  #      - script: tools/scripts/generateProtos.sh
-  #        name: My Script
+    gith:
+      - script: tools/scripts/generateProtos.sh
+        name: My Script
 
   ### PenumbraiOSProtosTests
 
