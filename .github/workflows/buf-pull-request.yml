@@ -3,6 +3,7 @@ on: pull_request
 jobs:
   protobuf-fresh:
     name: Compile protobuf specs to swift code
+    timeout-minutes: 30
     runs-on: buildjet-16vcpu-ubuntu-2004
     # runs-on: ubuntu-latest
     steps:
@@ -10,7 +11,6 @@ jobs:
         uses: actions/checkout@v2
         with:
           repository: penumbra-zone/penumbra
-          ref: main
       - name: Install Rust toolchain
         uses: actions-rs/toolchain@v1
         with:
