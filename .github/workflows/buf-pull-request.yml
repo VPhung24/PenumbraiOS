@@ -1,22 +1,16 @@
 name: buf-pull-request
 on: pull_request
 jobs:
-  build:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v2
-      - uses: bufbuild/buf-setup-action@v1
-        with:
-          input: 'proto'
   protobuf-fresh:
     name: Compile protobuf specs to swift code
     runs-on: buildjet-16vcpu-ubuntu-2004
     # runs-on: ubuntu-latest
     steps:
       - name: Checkout the source code
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
         with:
-          repository: git@github.com:penumbra-zone/penumbra.git
+          repository: penumbra-zone/penumbra
+          ref: main
       - name: Install Rust toolchain
         uses: actions-rs/toolchain@v1
         with:
