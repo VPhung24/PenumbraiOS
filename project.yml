@@ -71,8 +71,9 @@ targets:
     dependencies:
       - target: PenumbraiOSProtos
       - package: VivUIExtensions
+      - package: VivBottomSheet
     postCompileScripts:
-      - script: /opt/homebrew/bin/swiftlint
+      - script: /opt/homebrew/bin/swiftlint --fix
         name: Run SwiftLint
         basedOnDependencyAnalysis: false
 
@@ -95,7 +96,7 @@ targets:
         SWIFT_VERSION: 5.2
     sources: [PenumbraiOSUITests]
     postCompileScripts:
-      - script: /opt/homebrew/bin/swiftlint
+      - script: /opt/homebrew/bin/swiftlint --fix
         name: Run SwiftLint
         basedOnDependencyAnalysis: false
 
@@ -127,7 +128,7 @@ targets:
         DEVELOPMENT_TEAM: FG655QY4XD
         SWIFT_VERSION: 5.2
     postCompileScripts:
-      - script: /opt/homebrew/bin/swiftlint
+      - script: /opt/homebrew/bin/swiftlint --fix
         name: Run SwiftLint
         basedOnDependencyAnalysis: false
     gith:
@@ -153,6 +154,6 @@ targets:
     scheme: {}
     sources: [PenumbraiOSProtosTests]
     postCompileScripts:
-      - script: /opt/homebrew/bin/swiftlint
+      - script: /opt/homebrew/bin/swiftlint --fix
         name: Run SwiftLint
         basedOnDependencyAnalysis: false
