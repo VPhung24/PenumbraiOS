@@ -10,7 +10,10 @@ packages:
     from: 1.13.0
   VivUIExtensions:
     url: https://github.com/VPhung24/VivUIExtensions.git
-    from: 1.0.1
+    from: 1.0.3
+  VivBottomSheet:
+    url: https://github.com/VPhung24/VivUIExtensions.git
+    from: 1.0.3
 targets:
   ### PenumbraiOS App
   PenumbraiOS:

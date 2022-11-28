@@ -15,17 +15,21 @@ class MainViewController: UIViewController {
         title = "Account 1 Name"
         view.backgroundColor = .systemBackground
 
-        // TODO: animation and custom bottom sheet
-        let mockBottomSheet = UIView(frame: .zero)
-        let bottomSheetTest = PenumbraActionView(bottomSheetType: .request, delegate: self)
+        navigationItem.rightBarButtonItem = UIBarButtonItem(systemItem: .add, primaryAction: UIAction { _ in
+            let bottomSheetTest = PenumbraActionViewController(type: .onboard, delegate: self)
 
-        mockBottomSheet.addSubviewWithInsets(bottomSheetTest)
-        view.addSubviewWithConstraints(mockBottomSheet, [
-            mockBottomSheet.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            mockBottomSheet.heightAnchor.constraint(equalToConstant: view.bounds.height / 2),
-            mockBottomSheet.bottomAnchor.constraint(equalTo: view.bottomAnchor),
-            mockBottomSheet.widthAnchor.constraint(equalToConstant: view.bounds.width - 20)
-        ])
+            bottomSheetTest.preferredSheetSizing = .medium
+            bottomSheetTest.panToDismissEnabled = false
+            self.present(bottomSheetTest, animated: true)
+        })
+
+        navigationItem.leftBarButtonItem = UIBarButtonItem(systemItem: .refresh, primaryAction: UIAction { _ in
+            let bottomSheetTest = PenumbraActionViewController(type: .request, delegate: self)
+
+            bottomSheetTest.preferredSheetSizing = .medium
+            bottomSheetTest.panToDismissEnabled = false
+            self.present(bottomSheetTest, animated: true)
+        })
     }
 }
 
