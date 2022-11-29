@@ -11,7 +11,7 @@ disabled_rules:
   - force_cast
 
 excluded:
-  - PenumbraiOS/swift-proto
+  - PenumbraiOS/PenumbraiOSProtos/swift_protos
   - PenumbraiOSProtos/.build
 
 custom_rules:
