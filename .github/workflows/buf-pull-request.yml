@@ -31,7 +31,7 @@ jobs:
       - name: install swift protos dependencies
         uses: ConorMacBride/install-package@v1.1.0
         with: 
-          brew: swift-protobuf grpc-swift
+          brew: swift-protobuf grpc-swift openssl
 
       # N.B. The freshness check can have false negatives, if `prost` output
       # is superficially but not substantively different. That's OK for now:
@@ -46,18 +46,12 @@ jobs:
 
           rustup toolchain install nightly
           cargo build --target-dir target
-          for i in "aarch64-apple-ios" "x86_64-apple-darwin" "aarch64-apple-darwin" "x86_64-apple-ios" "aarch64-apple-ios-sim"
-          do
-            echo "adding & building target $i"
-            echo "rustup target add $i"
-            rustup target add $i
-            echo "cargo build --release --target-dir target --target $i"
-            cargo build --release --target-dir target --target $i
-          done
-          rustup component add rust-src --toolchain nightly-aarch64-apple-darwin
+          rustup target add "aarch64-apple-ios" "x86_64-apple-darwin" "aarch64-apple-darwin" "x86_64-apple-ios" "aarch64-apple-ios-sim"
+          cargo build --release --target-dir target --target "aarch64-apple-ios" --target "x86_64-apple-darwin" --target "aarch64-apple-darwin" --target "x86_64-apple-ios" --target "aarch64-apple-ios-sim" 
 
-          cargo +nightly build --release -Z build-std --target x86_64-apple-ios-macabi --target-dir target
-          cargo +nightly build --release -Z build-std --target aarch64-apple-ios-macabi --target-dir target
+          rustup component add rust-src --toolchain nightly-aarch64-apple-darwin
+          cargo +nightly build --release --target-dir target -Z build-std --target x86_64-apple-ios-macabi --target aarch64-apple-ios-macabi
+
           lipo -create \
             target/x86_64-apple-darwin/release/libpenumbra_c_bindings.a \
             target/aarch64-apple-darwin/release/libpenumbra_c_bindings.a \
