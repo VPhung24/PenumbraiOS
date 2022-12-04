@@ -43,6 +43,6 @@ jobs:
           ls
           cd ~/penumbra
           ls
-     //     /penumbra-c-bindings/
-       //   ./setupTargets.zsh
+   #     /penumbra-c-bindings/
+       #   ./setupTargets.zsh
           
