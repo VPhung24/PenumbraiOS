@@ -44,8 +44,8 @@ jobs:
           cd penumbra/penumbra-c-bindings
           ls
 
-          curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
-          rustup toolchain install nightly -y
+          curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -y
+          rustup toolchain install nightly
           cargo build --target-dir target
           for i in "aarch64-apple-ios" "x86_64-apple-darwin" "aarch64-apple-darwin" "x86_64-apple-ios" "aarch64-apple-ios-sim"
           do
