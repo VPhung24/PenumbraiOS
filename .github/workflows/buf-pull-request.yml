@@ -40,5 +40,5 @@ jobs:
       - name: swift protos
         shell: bash
         run: |
-          ls && cd ~/penumbra
+          cd ~/penumbra
           
