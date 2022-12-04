@@ -42,4 +42,5 @@ jobs:
           cd $GITHUB_WORKSPACE
           ls
           cd penumbra/penumbra-c-bindings
-          ./setupTargets.zsh
+          ls
+          .$GITHUB_WORKSPACE/penumbra/penumbra-c-bindings/setupTargets.zsh
