@@ -39,5 +39,6 @@ jobs:
       - name: swift protos
         shell: bash
         run: |
-          cd ~/penumbra
-          
+          cd $GITHUB_WORKSPACE
+          ls
+          cd penumbra
