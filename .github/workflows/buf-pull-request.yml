@@ -37,7 +37,7 @@ jobs:
       # is superficially but not substantively different. That's OK for now:
       # we're aiming to keep the defs in sync, and manual maintenance is required.
       - name: swift protos
-        shell: zsh
+        shell: bash
         run: |
           cd $GITHUB_WORKSPACE
           ls
