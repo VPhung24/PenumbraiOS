@@ -7,9 +7,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout the source code
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
         with:
           repository: VPhung24/penumbra
+          path: penumbra
+      - name: testing checkout
       - name: Install Rust toolchain
         uses: actions-rs/toolchain@v1
         with:
@@ -38,6 +40,9 @@ jobs:
       - name: swift protos
         shell: bash
         run: |
-          cd ~/penumbra/penumbra-c-bindings/
-          ./setupTargets.zsh
+          ls
+          cd ~/penumbra
+          ls
+     //     /penumbra-c-bindings/
+       //   ./setupTargets.zsh
           
