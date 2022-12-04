@@ -38,7 +38,6 @@ jobs:
       - name: swift protos
         shell: bash
         run: |
-          cd proto/
-          mkdir swift_proto
+          cd penumbra-c-bindings/
           ./setupTargets.zsh
           
