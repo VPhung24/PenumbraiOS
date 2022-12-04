@@ -4,7 +4,7 @@ jobs:
   protobuf-fresh:
     name: Compile protobuf specs to swift code
     timeout-minutes: 30
-    runs-on: ubuntu-latest
+    runs-on: macOS-latest
     steps:
       - name: Checkout the source code
         uses: actions/checkout@v3
@@ -27,7 +27,10 @@ jobs:
           profile: minimal
           toolchain: stable
           override: false
-
+      - name: Install xcode tools
+        # use base for 'set -eo pipefail'
+        shell: bash
+        run: xcode-select --install
       - name: Install protobuf compiler
         # use base for 'set -eo pipefail'
         shell: bash
