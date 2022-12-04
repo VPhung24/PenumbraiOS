@@ -27,10 +27,6 @@ jobs:
           profile: minimal
           toolchain: stable
           override: false
-      - name: Install xcode tools
-        # use base for 'set -eo pipefail'
-        shell: bash
-        run: xcode-select --install
       - name: Install protobuf compiler
         # use base for 'set -eo pipefail'
         shell: bash
