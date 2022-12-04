@@ -22,6 +22,7 @@ jobs:
             target/
             .build
           key: ${{ runner.os }}-cargo
+          restore-keys: ${{ runner.os }}-cargo
       - name: Install Rust toolchain
         uses: actions-rs/toolchain@v1
         with:
