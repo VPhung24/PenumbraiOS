@@ -40,9 +40,5 @@ jobs:
       - name: swift protos
         shell: bash
         run: |
-          ls
-          cd ~/penumbra
-          ls
-   #     /penumbra-c-bindings/
-       #   ./setupTargets.zsh
+          ls && cd ~/penumbra
           
