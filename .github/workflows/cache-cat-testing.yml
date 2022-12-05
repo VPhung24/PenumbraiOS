@@ -29,9 +29,7 @@ jobs:
           override: true
       - name: Install protobuf compiler
         shell: bash
-        run: |
-          curl -sSfL -O https://github.com/protocolbuffers/protobuf/releases/download/v${PROTOC_VERSION}/protoc-${PROTOC_VERSION}-linux-x86_64.zip
-          unzip protoc-${PROTOC_VERSION}-linux-x86_64.zip -d $HOME/.local
+        run: curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
         env:
           PROTOC_VERSION: "21.8"
       - name: install swift protos dependencies
