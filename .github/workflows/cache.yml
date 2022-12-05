@@ -1,4 +1,4 @@
-name: Caching with npm
+name: Caching c binding build
 on: push
 jobs:
   build:
@@ -9,7 +9,7 @@ jobs:
         with:
           repository: VPhung24/penumbra
           path: penumbra
-      - name: Cache cargo 
+      - name: Cache cargo
         id: cache-cargo
         uses: actions/cache@v3
         env:
@@ -31,6 +31,6 @@ jobs:
         run: cargo --list
 
       - name: Build
-        run: | 
+        run: |
           cd $GITHUB_WORKSPACE/penumbra/penumbra-c-bindings
           cargo build --target-dir target

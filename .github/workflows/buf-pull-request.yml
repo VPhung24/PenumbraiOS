@@ -4,7 +4,7 @@ jobs:
   protobuf-fresh:
     name: Compile protobuf specs to swift code
     timeout-minutes: 30
-    runs-on: macOS-latest
+    runs-on: macos-latest
     steps:
       - name: Checkout the source code
         uses: actions/checkout@v3
@@ -21,8 +21,8 @@ jobs:
             ~/.cargo/git/db/
             target/
             .build
-          key: ${{ runner.os }}-cargo
-          restore-keys: ${{ runner.os }}-cargo
+          key: theCache
+          restore-keys: theCache
       - name: Install Rust toolchain
         uses: actions-rs/toolchain@v1
         with:
@@ -41,14 +41,14 @@ jobs:
           PROTOC_VERSION: "21.8"
       - name: install swift protos dependencies
         uses: ConorMacBride/install-package@v1.1.0
-        with: 
+        with:
           brew: swift-protobuf grpc-swift
       - name: install nightly
         shell: bash
         run: rustup toolchain install nightly
       - name: build crate
         shell: bash
-        run: | 
+        run: |
           cd $GITHUB_WORKSPACE/penumbra/penumbra-c-bindings
           cargo build --target-dir target
       - name: ios & sim
@@ -80,7 +80,7 @@ jobs:
             target/x86_64-apple-ios-macabi/release/libpenumbra_c_bindings.a \
             target/aarch64-apple-ios-macabi/release/libpenumbra_c_bindings.a \
             -output libpenumbra_c_bindings_maccatalyst.a
-     
+
       - name: build xcframework
         shell: bash
         run: |
@@ -95,7 +95,7 @@ jobs:
             -library ./target/aarch64-apple-ios/release/libpenumbra_c_bindings.a \
             -headers ./include/ \
             -output penumbra_c_bindings.xcframework
-      
+
       - name: zip
         shell: bash
         run: |
