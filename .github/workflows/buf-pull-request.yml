@@ -3,7 +3,7 @@ on: pull_request
 jobs:
   protobuf-fresh:
     name: Compile protobuf specs to swift code
-    timeout-minutes: 60
+    timeout-minutes: 120
     runs-on: macos-latest
     steps:
       - name: Checkout the source code
