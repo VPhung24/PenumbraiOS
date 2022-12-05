@@ -52,3 +52,9 @@ jobs:
           cd $GITHUB_WORKSPACE/penumbra/penumbra-c-bindings
           rustup target add "aarch64-apple-ios" "x86_64-apple-darwin" "aarch64-apple-darwin" "x86_64-apple-ios" "aarch64-apple-ios-sim"
           cargo build --release --target-dir target --target "aarch64-apple-ios" --target "x86_64-apple-darwin" --target "aarch64-apple-darwin" --target "x86_64-apple-ios" --target "aarch64-apple-ios-sim"
+      - name: macabi
+        shell: bash
+        run: |
+          cd $GITHUB_WORKSPACE/penumbra/penumbra-c-bindings
+          rustup component add rust-src --toolchain nightly-aarch64-apple-darwin
+          cargo +nightly build --release --target-dir target -Z build-std --target x86_64-apple-ios-macabi --target aarch64-apple-ios-macabi
