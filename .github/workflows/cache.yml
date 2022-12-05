@@ -1,0 +1,44 @@
+name: Caching with npm
+on: push
+jobs:
+  build:
+    runs-on: macos-latest
+    steps:
+      - name: cache dep for penuumbra
+        uses: actions/checkout@v3
+        with:
+          repository: VPhung24/penumbra
+          path: penumbra
+      - name: Cache cargo 
+        id: cache-cargo
+        uses: actions/cache@v3
+        env:
+          cache-name: cache-cargo-modules
+        with:
+          path: |
+            ~/.cargo/bin/
+            ~/.cargo/registry/index/
+            ~/.cargo/registry/cache/
+            ~/.cargo/git/db/
+            target/
+            .build
+          key: theCache
+          restore-keys: theCache
+
+      - if: ${{ steps.cache-cargo.outputs.cache-hit != 'true' }}
+        name: List the state of cargo modules
+        continue-on-error: true
+        run: cargo --list
+
+      - name: Install dependencies
+        run: | 
+          cd $GITHUB_WORKSPACE/penumbra/penumbra-c-bindings
+          cargo install
+
+      - name: Build
+        run: | 
+          cd $GITHUB_WORKSPACE/penumbra/penumbra-c-bindings
+          cargo build
+
+      - name: Test
+        run: npm test
