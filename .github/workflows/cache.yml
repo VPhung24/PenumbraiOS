@@ -33,4 +33,4 @@ jobs:
       - name: Build
         run: | 
           cd $GITHUB_WORKSPACE/penumbra/penumbra-c-bindings
-          cargo build
+          cargo build --target-dir target
