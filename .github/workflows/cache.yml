@@ -30,15 +30,7 @@ jobs:
         continue-on-error: true
         run: cargo --list
 
-      - name: Install dependencies
-        run: | 
-          cd $GITHUB_WORKSPACE/penumbra/penumbra-c-bindings
-          cargo install
-
       - name: Build
         run: | 
           cd $GITHUB_WORKSPACE/penumbra/penumbra-c-bindings
           cargo build
-
-      - name: Test
-        run: npm test
