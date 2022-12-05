@@ -25,17 +25,14 @@ jobs:
         uses: actions-rs/toolchain@v1
         with:
           profile: minimal
-          toolchain: stable
-          override: false
+          toolchain: nightly
+          override: true
       - name: Install protobuf compiler
-        # use base for 'set -eo pipefail'
         shell: bash
         run: |
           curl -sSfL -O https://github.com/protocolbuffers/protobuf/releases/download/v${PROTOC_VERSION}/protoc-${PROTOC_VERSION}-linux-x86_64.zip
           unzip protoc-${PROTOC_VERSION}-linux-x86_64.zip -d $HOME/.local
         env:
-          # N.B. the major version is omitted in the download URLs,
-          # so "21.8" actually means "3.21.8".
           PROTOC_VERSION: "21.8"
       - name: install swift protos dependencies
         uses: ConorMacBride/install-package@v1.1.0
@@ -43,22 +40,19 @@ jobs:
           brew: swift-protobuf grpc-swift
       - name: build mac cat
         shell: bash
-        run: | 
+        run: |
           cd $GITHUB_WORKSPACE/penumbra/penumbra-c-bindings
-          rustup toolchain install nightly
           rustup component add rust-src --toolchain nightly-aarch64-apple-darwin
           cargo +nightly build --release --target-dir target -Z build-std --target x86_64-apple-ios-macabi --target aarch64-apple-ios-macabi
       - name: build lib
         shell: bash
         run: |
-            lipo -create \
-            target/x86_64-apple-ios-macabi/release/libpenumbra_c_bindings.a \
-            target/aarch64-apple-ios-macabi/release/libpenumbra_c_bindings.a \
-            -output libpenumbra_c_bindings_maccatalyst.a
+          lipo -create \
+          target/x86_64-apple-ios-macabi/release/libpenumbra_c_bindings.a \
+          target/aarch64-apple-ios-macabi/release/libpenumbra_c_bindings.a \
+          -output libpenumbra_c_bindings_maccatalyst.a
       - name: Upload a Build Artifact
         uses: actions/upload-artifact@v3.1.1
         with:
           name: macos
           path: $GITHUB_WORKSPACE/penumbra/penumbra-c-bindings/libpenumbra_c_bindings_maccatalyst.a
-          
-          
