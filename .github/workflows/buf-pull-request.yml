@@ -46,6 +46,11 @@ jobs:
       - name: install nightly
         shell: bash
         run: rustup toolchain install nightly
+      - name: build crate
+        shell: bash
+        run: | 
+          cd $GITHUB_WORKSPACE/penumbra/penumbra-c-bindings
+          cargo build --target-dir target
       - name: ios & sim
         shell: bash
         run: |
