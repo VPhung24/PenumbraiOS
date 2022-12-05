@@ -1,0 +1,56 @@
+name: Caching c binding build
+on: push
+jobs:
+  build:
+    runs-on: macos-latest
+    steps:
+      - name: Checkout the source code
+        uses: actions/checkout@v3
+        with:
+          repository: VPhung24/penumbra
+          path: penumbra
+      - name: cache
+        uses: actions/cache@v3
+        id: cache-cargo
+        env:
+          cache-name: cache-cargo-modules
+        with:
+          path: |
+            ~/.cargo
+            target
+            .build
+          key: theCache-macos
+          restore-keys: theCache-macos
+      - name: Install Rust toolchain
+        uses: actions-rs/toolchain@v1
+        with:
+          profile: minimal
+          toolchain: nightly
+          override: true
+      - name: Install protobuf compiler
+        shell: bash
+        run: curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+        env:
+          PROTOC_VERSION: "21.8"
+      - name: install swift protos dependencies
+        uses: ConorMacBride/install-package@v1.1.0
+        with:
+          brew: swift-protobuf grpc-swift
+      - name: build mac cat
+        shell: bash
+        run: |
+          cd $GITHUB_WORKSPACE/penumbra/penumbra-c-bindings
+          rustup component add rust-src --toolchain nightly-aarch64-apple-darwin
+          cargo +nightly build --release --target-dir target -Z build-std --target x86_64-apple-ios-macabi --target aarch64-apple-ios-macabi
+      - name: build lib
+        shell: bash
+        run: |
+          lipo -create \
+          target/x86_64-apple-ios-macabi/release/libpenumbra_c_bindings.a \
+          target/aarch64-apple-ios-macabi/release/libpenumbra_c_bindings.a \
+          -output libpenumbra_c_bindings_maccatalyst.a
+      - name: Upload a Build Artifact
+        uses: actions/upload-artifact@v3.1.1
+        with:
+          name: macos
+          path: $GITHUB_WORKSPACE/penumbra/penumbra-c-bindings/libpenumbra_c_bindings_maccatalyst.a

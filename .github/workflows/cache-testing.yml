@@ -1,0 +1,66 @@
+name: cache-testing
+on: pull_request
+jobs:
+  protobuf-fresh:
+    name: Compile protobuf specs to swift code
+    timeout-minutes: 120
+    runs-on: macos-latest
+    steps:
+      - name: Checkout the source code
+        uses: actions/checkout@v3
+        with:
+          repository: VPhung24/penumbra
+          path: penumbra
+      - name: cache
+        uses: actions/cache@v3
+        id: cache-cargo
+        env:
+          cache-name: cache-cargo-modules
+        with:
+          path: |
+            ~/.cargo
+            target
+            .build
+          key: theCache
+          restore-keys: theCache
+      - name: Install Rust toolchain
+        uses: actions-rs/toolchain@v1
+        with:
+          profile: minimal
+          toolchain: stable
+          override: false
+      - name: Install protobuf compiler
+        # use base for 'set -eo pipefail'
+        shell: bash
+        run: curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+        env:
+          # N.B. the major version is omitted in the download URLs,
+          # so "21.8" actually means "3.21.8".
+          PROTOC_VERSION: "21.8"
+      - name: install swift protos dependencies
+        uses: ConorMacBride/install-package@v1.1.0
+        with:
+          brew: swift-protobuf grpc-swift
+      - name: ios & sim
+        shell: bash
+        run: |
+          cd $GITHUB_WORKSPACE/penumbra/penumbra-c-bindings
+          rustup target add "aarch64-apple-ios" "x86_64-apple-darwin" "aarch64-apple-darwin" "x86_64-apple-ios" "aarch64-apple-ios-sim"
+          cargo build --release --target-dir target --target "aarch64-apple-ios" --target "x86_64-apple-darwin" --target "aarch64-apple-darwin" --target "x86_64-apple-ios" --target "aarch64-apple-ios-sim"
+      - name: create libs
+        shell: bash
+        run: |
+          cd $GITHUB_WORKSPACE/penumbra/penumbra-c-bindings
+          lipo -create \
+            target/x86_64-apple-darwin/release/libpenumbra_c_bindings.a \
+            target/aarch64-apple-darwin/release/libpenumbra_c_bindings.a \
+            -output libpenumbra_c_bindings_macos.a
+          lipo -create \
+            target/x86_64-apple-ios/release/libpenumbra_c_bindings.a \
+            target/aarch64-apple-ios-sim/release/libpenumbra_c_bindings.a \
+            -output libpenumbra_c_bindings_iossimulator.a
+      - name: Upload Build Artifact
+        uses: actions/upload-artifact@v3.1.1
+        with:
+          name: macos
+          path: $GITHUB_WORKSPACE/penumbra/penumbra-c-bindings/libpenumbra_c_bindings_maccatalyst.a
