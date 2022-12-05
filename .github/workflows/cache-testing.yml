@@ -43,9 +43,6 @@ jobs:
         uses: ConorMacBride/install-package@v1.1.0
         with:
           brew: swift-protobuf grpc-swift
-      - name: install nightly
-        shell: bash
-        run: rustup toolchain install nightly
       - name: ios & sim
         shell: bash
         run: |
@@ -56,5 +53,6 @@ jobs:
         shell: bash
         run: |
           cd $GITHUB_WORKSPACE/penumbra/penumbra-c-bindings
+          rustup toolchain install nightly
           rustup component add rust-src --toolchain nightly-aarch64-apple-darwin
           cargo +nightly build --release --target-dir target -Z build-std --target x86_64-apple-ios-macabi --target aarch64-apple-ios-macabi
