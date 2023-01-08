@@ -7,17 +7,13 @@
 
 import UIKit
 import VivUIExtensions
-import VivBottomSheet
+import PanModal
 
-class PenumbraActionViewController: BottomSheetController {
+class PenumbraActionViewController: UIViewController, PanModalPresentable {
     private var sheetType: PenumbraFormType
+    private var isKeyboardShown: Bool = false
+    private var keyboardHeight: CGFloat = 0
     weak var delegate: PenumbraAccessoryViewDelegate?
-
-    private lazy var modalDismissButton = UIButton(type: .custom, primaryAction: UIAction { _ in
-        print("tap")
-    }).configured {
-        $0.setImage(UIImage(systemName: "minus")?.resizeImageToWidth(newWidth: 40).withTintColor(.tertiaryLabel, renderingMode: .alwaysOriginal), for: .normal)
-    }
 
     private lazy var titleLabel = UILabel().configured {
         $0.font = UIFont.preferredFont(forTextStyle: .subheadline)
@@ -35,9 +31,7 @@ class PenumbraActionViewController: BottomSheetController {
 
     lazy var textView = MultilinePlaceholderTextView(type: sheetType)
 
-    lazy var stackView = UIStackView(arrangedSubViews: [modalDismissButton, titleLabel, textView, accessoryButtonStack], axis: .vertical, distribution: .fill).configured {
-        $0.alignment = .fill
-    }
+    lazy var stackView = UIStackView(arrangedSubViews: [titleLabel, textView, accessoryButtonStack], axis: .vertical)
 
     init(type: PenumbraFormType, delegate: PenumbraAccessoryViewDelegate?) {
         self.delegate = delegate
@@ -50,8 +44,62 @@ class PenumbraActionViewController: BottomSheetController {
     }
 
     override func viewDidLoad() {
+        super.viewDidLoad()
+        view.addSubviewWithConstraints(stackView, [
+            stackView.heightAnchor.constraint(equalToConstant: 300),
+            stackView.widthAnchor.constraint(equalToConstant: self.view.bounds.width)
+        ])
         view.backgroundColor = .systemBackground
+    }
 
-        view.addSubviewWithInsets(stackView)
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillDisappear), name: UIResponder.keyboardWillHideNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillAppear), name: UIResponder.keyboardWillShowNotification, object: nil)
+    }
+
+    @objc func keyboardWillAppear(_ notification: Notification) {
+        isKeyboardShown = true
+
+        if let keyboardFrame: NSValue = notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue {
+            let keyboardRectangle = keyboardFrame.cgRectValue
+            let keyboardHeightX = keyboardRectangle.height
+
+            keyboardHeight = keyboardHeightX
+        }
+
+        panModalSetNeedsLayoutUpdate()
+        panModalTransition(to: .longForm)
+    }
+
+    @objc func keyboardWillDisappear() {
+        isKeyboardShown = false
+
+        panModalSetNeedsLayoutUpdate()
+        panModalTransition(to: .shortForm)
+    }
+
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        NotificationCenter.default.removeObserver(self)
+    }
+
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
+    }
+
+    var panScrollable: UIScrollView? {
+        return nil
+    }
+
+    var shortFormHeight: PanModalHeight {
+        if isKeyboardShown {
+            return .contentHeight(300 + keyboardHeight)
+        }
+        return .contentHeight(300)
+    }
+
+    var longFormHeight: PanModalHeight {
+        return .contentHeight(300 + keyboardHeight)
     }
 }

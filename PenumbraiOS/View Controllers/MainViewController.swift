@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import PanModal
 
 class MainViewController: UIViewController {
 
@@ -18,17 +19,13 @@ class MainViewController: UIViewController {
         navigationItem.rightBarButtonItem = UIBarButtonItem(systemItem: .add, primaryAction: UIAction { _ in
             let bottomSheetTest = PenumbraActionViewController(type: .onboard, delegate: self)
 
-            bottomSheetTest.preferredSheetSizing = .medium
-            bottomSheetTest.panToDismissEnabled = false
-            self.present(bottomSheetTest, animated: true)
+            self.presentPanModal(bottomSheetTest)
         })
 
         navigationItem.leftBarButtonItem = UIBarButtonItem(systemItem: .refresh, primaryAction: UIAction { _ in
             let bottomSheetTest = PenumbraActionViewController(type: .request, delegate: self)
 
-            bottomSheetTest.preferredSheetSizing = .medium
-            bottomSheetTest.panToDismissEnabled = false
-            self.present(bottomSheetTest, animated: true)
+            self.presentPanModal(bottomSheetTest)
         })
     }
 }
