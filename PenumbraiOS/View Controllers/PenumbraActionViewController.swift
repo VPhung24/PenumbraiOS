@@ -46,7 +46,8 @@ class PenumbraActionViewController: UIViewController, PanModalPresentable {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.addSubviewWithConstraints(stackView, [
-            stackView.heightAnchor.constraint(equalToConstant: 300),
+            stackView.topAnchor.constraint(equalTo: self.view.topAnchor, constant: 20),
+            stackView.heightAnchor.constraint(equalToConstant: 280),
             stackView.widthAnchor.constraint(equalToConstant: self.view.bounds.width)
         ])
         view.backgroundColor = .systemBackground
